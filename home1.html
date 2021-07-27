@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookshop</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- Scrollbar Custom CSS -->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">-->
+    <!-- Font Awesome JS -->
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>-->
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>-->
+</head>
+
+<body>
+    <div class="container mt-2 mb-2 text-center mb-3">
+        <button class="btn btn-dark free_btn">Free Books</button>
+        <button class="btn btn-dark paid_btn">Paid Books</button>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="text-center free_books container">
+                <h3>Free Books</h3>
+                <table class="table table-responsive table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Read</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody class="free_books_here">
+                       
+                         <tr>
+                            <td scope="col">1</td>
+                            <td scope="col">02/05/2020</td>
+                            <td scope="col">Time</td>
+                            <td scope="col">GHc 3</td>
+                            <td scope="col">GHc 440</td>
+                            <td scope="col">Published</td>
+                            <td scope="col">
+                                <button class="btn btn-dark">Read</button>
+                            </td>
+                            <td scope="col">
+                                <button class="btn btn-dark" data-toggle="modal" data-target="#details" data_id="" data_index="">Details</button </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center paid_books container">
+                <h3>Paid Books</h3>
+                <table class="table table-responsive table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Sales</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Read</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody class="paid_books_here">
+                       
+                        <tr>
+                            <td scope="col">1</td>
+                            <td scope="col">02/05/2020</td>
+                            <td scope="col">Time</td>
+                            <td scope="col">GHc 3</td>
+                            <td scope="col">GHc 440</td>
+                            <td scope="col">Published</td>
+                            <td scope="col">
+                                <button class="btn btn-dark">Read</button>
+                            </td>
+                            <td scope="col">
+                                <button class="btn btn-dark" data-toggle="modal" data-target="#details" data_id="" data_index="">Details</button </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="text-center titler">Book Title here</h4>
+                    <div class="text-center mb-3">
+                        <img src="" class="rounded imager" width="70%" alt="">
+                    </div>
+                    
+                    <div class="row no-gutters">
+                        
+                        <div class="col-4 "> <b>Author :</b> 
+                        </div>
+                        <div class="col-8 author__"></div>
+                        
+                        <div class="col-4 "> <b>ISBN :</b> 
+                        </div>
+                        <div class="col-8 isbn__"></div>
+                         
+                        <div class="col-4 "> <b>Year :</b> 
+                        </div>
+                        <div class="col-8 year__"></div>
+                         
+                        <div class="col-4"><b>Price :</b> </div>
+                        <div class="col-8 price__"></div>
+                        <div class="col-4 "><b>Status :</b> </div>
+                        <div class="col-8 status__"></div>
+                        <div class="col-4 "><b>Downloads :</b> </div>
+                        <div class="col-8 downloads__"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning decline_book ">Decline</button>
+                    <button class="btn btn-success publish_book ">Publish</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- Popper.JS -->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>-->
+<!-- Bootstrap JS -->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>-->
+<!-- jQuery Custom Scroller CDN -->
+<script src="js/chart.js"></script>
+<script src="js/index.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/jquery_custom_scroll.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+        $('#dismiss, .overlay, .hider').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+
+
+</html>

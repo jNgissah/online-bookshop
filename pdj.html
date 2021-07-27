@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookshop</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- Scrollbar Custom CSS -->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">-->
+    <!-- Font Awesome JS -->
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>-->
+    <!--    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>-->
+</head>
+
+
+<body>
+
+<div class="container ">
+   <button class="books/07-cogs3-fe-bootstrap-2.pdf">book</button>
+   
+<!--    <div class="shadow read_here" style="height: :500px">-->
+<!--     <embed src="books/0904.2664.pdf" type="" width="100%" height="500px">-->
+     
+<!--     <iframe src="books/0904.2664.pdf" frameborder="0" width="100%" height="500px"></iframe>-->
+<!--      <object data="" type="pdf"></object>-->
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- Popper.JS -->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>-->
+<!-- Bootstrap JS -->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>-->
+<!-- jQuery Custom Scroller CDN -->
+<script src="js/chart.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/pdf.js"></script>
+<script src="js/jquery_custom_scroll.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("button").click(function(e){
+            let doc = $(e.target).attr("class")
+            
+            console.log(doc)
+            
+        })
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+        $('#dismiss, .overlay, .hider').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+
+
+</html>
